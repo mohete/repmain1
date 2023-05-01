@@ -1,7 +1,7 @@
 // app.js
 const http = require('http');  // 'http' module
 const hostname = '127.0.0.1';  // ip for localhost
-const port = 3000;
+const port = process.env.PORT || 3030;
 
 const server = http.createServer((req, res) => {
   res.statusCode = 200;  // set the repsonse status code to 200 "OK"
