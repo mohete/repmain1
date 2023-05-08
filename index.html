@@ -1,9 +1,33 @@
+<!DOCTYPE html>
 <html>
- <title>This is title head 4 repomain-static - 4 onrender</title>
 <head>
-</head>
+<title>
+Archive node connect client
+</title>
+<script type='text/javascript' src='ndcnncttstlib.js'></script>
+<script type='text/javascript' language='javascript'>
+var vmp_str=''
+function fprcs_retdcmprsndtls(){
+  var vretdcmprsnsdts = this.req.responseText;
+  vretdcmprsnsdts = '{' + vretdcmprsnsdts + '}';
+  vmp_str = vmp_str + "<span style='font-weight:bold'>person name" + "-" + "title</span>" + "<br>";
+  var vjretdcmprsnsdts = eval('(' +  vretdcmprsnsdts + ')');
+  for (var vix=0;vix<vjretdcmprsnsdts.company_desg.length;vix++)
+    vmp_str = vmp_str + vjretdcmprsnsdts.company_desg[vix].name +"&nbsp;&nbsp;-&nbsp;&nbsp;" + 
+  vjretdcmprsnsdts.company_desg[vix].designation + '<br>';
+  vmp_str = '<p>' + vmp_str;
+  var vdspn = document.getElementById('tdconsole');
+  vdspn.innerHTML = vmp_str;
+  vmp_str='';
+}
+</script>
+</head> 
 <body>
-  <p style='font:12pt times;color:blue'>Index file feed access repo/github - static site repomain-static - render - render.com
-   <img src='gthbflder1/Chrysanthemum.jpg' style='height:300px;width:400px;margin-left:20px;margin-top:20px'></img>
+<table style="width:30%;">
+<tr>
+<TD class='' style="border:2px solid mediumblue;width:100%;border:2px solid mediumblue;padding-bottom:3px;vertical-align:top"><table style="width:100%;position:relative;top:0.3%;left:0%"><tr style=""><td height="" style='vertical-align:top;border:none'><table style="position:static;top:2%;left:0%;height:40px;width:100%;border:none"><tr><td class='' style="vertical-align:middle;text-align:left;padding-left;padding-right:5px;font:13pt times;border:none ">Click to return Names+Title!</td></tr><tr><td id="q1" class='' style="height:20px;font:11pt times;border:none"><button id='q2' onclick="javascript:new net.ContentLoader('http://127.0.0.1:3010/fl_slv3dbconnlbrdt.js/?flag=cnncttrtrv',fprcs_retdcmprsndtls);" style='width:30%;margin-top:5px;margin-right:3px'>Ok</button></td></tr></table></td></tr><tr style=""><td id="tdconsole" height="40px" style='border:2px solid mediumblue;vertical-align:top;text-align:center;margin-left:10px'></td></tr></table>
+ </TD>
+</tr>
+</table>
 </body>
 </html>
