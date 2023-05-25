@@ -14,12 +14,11 @@ function fprcs_retdcmprsndtls(){
   vmp_str = vmp_str + "<span style='font-weight:bold'>person name" + "-" + "title</span>" + "<br>";
   var vjretdcmprsnsdts = eval('(' +  vretdcmprsnsdts + ')');
   vdivrlen = document.getElementById('ndcnnct_divrlen');
-  vrlen = vjretdcmprsnsdts.retrows;
+  /*vrlen = vjretdcmprsnsdts.retrows;
   vrlent = document.createTextNode(vrlen);
-  vdivrlen.appendChild(vrlent);
-  for (var vix=0;vix<vjretdcmprsnsdts.company_desg.length;vix++)
-    vmp_str = vmp_str + vjretdcmprsnsdts.company_desg[vix].name +"&nbsp;&nbsp;-&nbsp;&nbsp;" + 
-  vjretdcmprsnsdts.company_desg[vix].designation + '<br>';
+  vdivrlen.appendChild(vrlent); */
+  for (var vix=0;vix<vjretdcmprsnsdts.employee_info.length;vix++)
+    vmp_str = vmp_str + vjretdcmprsnsdts.employee_info[vix].emp_name + "-" + vjretdcmprsnsdts.employee_info[vix].designation + "-" + vjretdcmprsnsdts.employee_info[vix].dept + '<br>';
   vmp_str = '<p>' + vmp_str;
   var vdspn = document.getElementById('tdconsole');
   vdspn.innerHTML = vmp_str;
@@ -31,7 +30,7 @@ function fprcs_retdcmprsndtls(){
 <body>
 <table style="width:30%;">
 <tr>
-<TD class='' style="border:2px solid mediumblue;width:100%;border:2px solid mediumblue;padding-bottom:3px;vertical-align:top"><table style="width:100%;position:relative;top:0.3%;left:0%"><tr style=""><td height="" style='vertical-align:top;border:none'><table style="position:static;top:2%;left:0%;height:60px;width:100%;border:none"><tr><td class='' style="vertical-align:middle;text-align:left;padding-left;padding-right:5px;font:13pt times;border:none ">Click to return Names+Title!</td></tr><tr><td id="q1" class='' style="height:20px;font:11pt times;border:none"><button id='q2' onclick="javascript:new net.ContentLoader('https://rpstrymn1-nodejs.onrender.com/fl_slv3dbconnlbrdt.js/?flag=cnncttrtrv',fprcs_retdcmprsndtls);" style='width:30%;height:100%;margin-top:0px;margin-right:10px;float:left'>Ok</button><div id='ndcnnct_divrlen' style='border:2px solid red;width:55px;height:16px;text-align:center;vertical-align:bottom;margin-left:90px;'></div></td></tr></table></td></tr><tr style=""><td id="tdconsole" height="40px" style='border:2px solid mediumblue;vertical-align:top;text-align:center;margin-left:10px'></td></tr></table>
+<TD class='' style="border:2px solid mediumblue;width:100%;border:2px solid mediumblue;padding-bottom:3px;vertical-align:top"><table style="width:100%;position:relative;top:0.3%;left:0%"><tr style=""><td height="" style='vertical-align:top;border:none'><table style="position:static;top:2%;left:0%;height:60px;width:100%;border:none"><tr><td class='' style="vertical-align:middle;text-align:left;padding-left;padding-right:5px;font:13pt times;border:none ">Click to return Names+Title!</td></tr><tr><td id="q1" class='' style="height:20px;font:11pt times;border:none"><button id='q2' onclick="javascript:new net.ContentLoader('https://rpstrymn1-nodejs.onrender.com/fl_mysqldbconntst-depl.js/?flag=cnncttrtrv',fprcs_retdcmprsndtls);" style='width:30%;height:100%;margin-top:0px;margin-right:10px;float:left'>Ok</button><div id='ndcnnct_divrlen' style='border:2px solid red;width:55px;height:16px;text-align:center;vertical-align:bottom;margin-left:90px;'></div></td></tr></table></td></tr><tr style=""><td id="tdconsole" height="40px" style='border:2px solid mediumblue;vertical-align:top;text-align:center;margin-left:10px'></td></tr></table>
  </TD>
 </tr>
 </table>
